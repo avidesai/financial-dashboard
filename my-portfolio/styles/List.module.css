@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+
+.grid {
+    display: grid;
+    list-style-type: none;
+    padding-top: 30px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(11, 1fr); /* 11 rows */
+  }
+
+  .company {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    transition: transform 2s;
+    animation: rotate 2s linear infinite;
+  }
+
+  .company p {
+    color: black;
+    font-size: 18px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 800;
+  }
+  
