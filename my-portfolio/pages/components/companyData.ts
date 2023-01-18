@@ -1,6 +1,6 @@
 // companyData.ts
 export const companyData = [
-    { id: 1, name: "Tesla", websiteUrl: 'https://roic.ai/company/TSLA', logoUrl: 'https://hi-bk.com/wp-content/uploads/2020/08/hibkdog.png' },
+    { id: 1, name: "Tesla", websiteUrl: 'https://roic.ai/company/TSLA', logoUrl: 'https://roic.ai/company/TSLA' },
     { id: 2, name: "ASML", websiteUrl: 'https://roic.ai/company/ASML', logoUrl: 'https://roic.ai/company/TSLA' },
     { id: 3, name: "LVMH", websiteUrl: 'https://roic.ai/company/LVMH', logoUrl: 'https://roic.ai/company/TSLA' },
     { id: 4, name: "Nvidia", websiteUrl: 'https://roic.ai/company/NVDA', logoUrl: 'https://roic.ai/company/TSLA' },
