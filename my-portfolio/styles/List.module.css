@@ -4,23 +4,32 @@
     display: grid;
     list-style-type: none;
     padding-top: 30px;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-template-rows: repeat(11, 1fr); /* 11 rows */
+    grid-template-columns: repeat(3, 1fr); /* 2 columns */
+    grid-template-rows: repeat(8, 1fr); /* 11 rows */
   }
 
   .company {
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 14px;
+    margin-bottom: 14px;
     border-radius: 50%;
     transition: transform 2s;
     animation: rotate 2s linear infinite;
+    box-shadow: 2px 2px 2px 2px; 
   }
 
   .company p {
     color: black;
-    font-size: 18px;
+    font-size: 16px;
+    margin-top: 7px;
+    margin-right: 10px;
+    margin-left: 10px;
     font-family: 'Mulish', sans-serif;
     font-weight: 800;
   }
-  
+  .logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 8px 8px 8px 8px;
+}

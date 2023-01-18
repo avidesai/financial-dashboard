@@ -2,8 +2,6 @@ import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import CompanyList from './components/CompanyList'
 
-
-
 export default function Home() {
   return (
     <>
