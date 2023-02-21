@@ -1,0 +1,66 @@
+.card {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    margin-bottom: -10px;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .price {
+    color: #047426;
+    font-size: 22px;
+    font-weight: bolder;
+  }
+ 
+  .card.green {
+    background-color: rgba(0, 255, 0, 0.2);
+  }
+  .card.green2 {
+    background-color: rgba(0, 255, 0, 0.467);
+  }
+  .card.green3 {
+    background-color: rgba(0, 255, 0, 0.71);
+  }
+  .card.green4 {
+    background-color: rgba(0, 255, 0, 0.759);
+  }
+  
+  .card.red {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+  .card.red2 {
+    background-color: rgba(255, 0, 0, 0.508);
+  }
+  .card.red3 {
+    background-color: rgba(255, 0, 0, 0.67);
+  }
+  .card.red4 {
+    background-color: rgba(255, 0, 0, 0.815);
+  }
+  
+  .card.gray {
+    background-color: rgba(128, 128, 128, 0.2);
+  }

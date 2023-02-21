@@ -1,0 +1,15 @@
+.stock-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .stock-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
