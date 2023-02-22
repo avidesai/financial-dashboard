@@ -53,7 +53,7 @@ const StockGrid = () => {
       <TickerSearch addTicker={handleAddTicker} />
       <div className='stock-grid'>
         {stockData.map((data, index) => (
-          <StockCard key={index} data={data} logoUrl={data.logoUrl} />
+          <StockCard key={index} data={data} logoUrl={data.logoUrl} onDelete={(ticker) => setTickers(tickers.filter((t) => t !== ticker))} />
         ))}
       </div>
     </div>

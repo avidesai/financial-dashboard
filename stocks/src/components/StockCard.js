@@ -23,7 +23,7 @@ const getClassName = (percentChange) => {
   }
 };
 
-const StockCard = ({ data, logoUrl }) => {
+const StockCard = ({ data, onDelete }) => {
   // Function to format marketCap to display in billions
   const formatMarketCap = (marketCap) => {
     const billion = 1000000000;
@@ -33,6 +33,9 @@ const StockCard = ({ data, logoUrl }) => {
 
   return (
     <div className={`card ${getClassName(data.percentChange.toFixed(2))}`}>
+      <button className="delete-button" onClick={() => onDelete(data.ticker)}>
+        X
+      </button>
       <div className="card-header">
         <h2>{data.ticker}</h2>
       </div>
@@ -44,7 +47,6 @@ const StockCard = ({ data, logoUrl }) => {
     </div>
   );
 };
-
 
 
 export default StockCard;

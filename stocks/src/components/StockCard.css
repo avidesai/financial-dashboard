@@ -1,5 +1,5 @@
 .card {
-    width: 300px;
+    width: 320px;
     height: auto;
     margin: 10px;
     padding-top: 15px;
@@ -7,6 +7,21 @@
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .delete-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: none;
+    height:32px;
+    width:32px;
+    margin-left: 15px;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
   }
   
   .card-header {
@@ -16,6 +31,7 @@
     align-items: center;
     font-size: 19px;
     margin-bottom: -10px;
+    margin-top: -25px;
   }
   
   .card-body {
