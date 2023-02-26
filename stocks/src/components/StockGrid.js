@@ -5,47 +5,35 @@ import TickerSearch from './TickerSearch';
 import './StockGrid.css';
 
 const StockGrid = () => {
-  const [tickers, setTickers] = useState(['TSLA', 'NVDA', 'ASML', 'SNOW']);
+  const [tickers, setTickers] = useState([]);
   const [stockData, setStockData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const options = {
-          method: 'GET',
-          url: `https://yahoo-finance15.p.rapidapi.com/api/yahoo/qu/quote/${tickers.join()}`,
-          headers: {
-            'X-RapidAPI-Key': '7c614a191emsh26af0e5fc7d7599p194901jsn9c2bf771a8ec',
-            'X-RapidAPI-Host': 'yahoo-finance15.p.rapidapi.com',
-          },
-        };
+  const fetchStockData = async (ticker) => {
+    try {
+      const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker}&apikey=AH2T1RF8TAPDGZXY`;
+      const response = await axios.get(url);
+      console.log(response.data);
+      const quote = response.data['Global Quote'];
 
-        const response = await axios.request(options);
-        console.log(response.data);
-
-        const quotes = response.data;
-        const data = quotes.map((quote) => {
-          return {
-            ticker: quote.symbol,
-            companyName: quote.shortName,
-            stockPrice: quote.regularMarketPrice,
-            percentChange: quote.regularMarketChangePercent,
-            marketCap: quote.marketCap,
-            logoUrl: quote.logo_url,
-          };
-        });
-
-        setStockData(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchData();
-  }, [tickers]);
+      const data = {
+        ticker: quote['01. symbol'],
+        stockPrice: parseFloat(quote['05. price']).toFixed(2),
+        percentChange: parseFloat(quote['10. change percent']),
+      };
+      setStockData((prevStockData) => [...prevStockData, data]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleAddTicker = (ticker) => {
-    setTickers([...tickers, ticker]);
+    setTickers((prevTickers) => [...prevTickers, ticker]);
+    fetchStockData(ticker);
+  };
+
+  const handleDeleteTicker = (ticker) => {
+    setTickers((prevTickers) => prevTickers.filter((t) => t !== ticker));
+    setStockData((prevStockData) => prevStockData.filter((data) => data.ticker !== ticker));
   };
 
   return (
@@ -53,7 +41,7 @@ const StockGrid = () => {
       <TickerSearch addTicker={handleAddTicker} />
       <div className='stock-grid'>
         {stockData.map((data, index) => (
-          <StockCard key={index} data={data} logoUrl={data.logoUrl} onDelete={(ticker) => setTickers(tickers.filter((t) => t !== ticker))} />
+          <StockCard key={index} data={data} onDelete={handleDeleteTicker} />
         ))}
       </div>
     </div>
