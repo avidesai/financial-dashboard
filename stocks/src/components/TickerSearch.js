@@ -16,7 +16,7 @@ const TickerSearch = ({ addTicker }) => {
 
   return (
     <form onSubmit={handleSubmit} className="ticker-search">
-      <label>
+      <label className='ticker-label'>
         Stock Ticker:
         <input type="text" className="ticker-input" value={ticker} onChange={handleTickerChange} />
       </label>

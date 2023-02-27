@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import StockCard from './StockCard';
 import TickerSearch from './TickerSearch';
@@ -14,7 +14,7 @@ const StockGrid = () => {
       const response = await axios.get(url);
       console.log(response.data);
       const quote = response.data['Global Quote'];
-
+  
       const data = {
         ticker: quote['01. symbol'],
         stockPrice: parseFloat(quote['05. price']).toFixed(2),
@@ -22,9 +22,10 @@ const StockGrid = () => {
       };
       setStockData((prevStockData) => [...prevStockData, data]);
     } catch (error) {
-      console.log(error);
+      console.log(`Failed to fetch data for ticker ${ticker}: ${error}`);
     }
   };
+  
 
   const handleAddTicker = (ticker) => {
     setTickers((prevTickers) => [...prevTickers, ticker]);

@@ -1,7 +1,7 @@
 .card {
-    width: 330px;
+    width: 315px;
     height: auto;
-    margin: 10px;
+    margin-top: 30px;
     padding-top: 15px;
     padding-bottom: 30px;
     background-color: #fff;
@@ -12,16 +12,16 @@
   .delete-button {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.505);
     border: none;
-    height:32px;
-    width:32px;
+    height:28px;
+    width: 28px;
     margin-left: 15px;
     border-radius: 5px;
-    padding: 8px;
-    font-size: 16px;
+    padding: 7px;
+    font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.7s ease-in-out;
   }
   
   .card-header {
@@ -30,8 +30,9 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 5px;
+    margin-top:-10px;
   }
   
   .card-body {
@@ -48,7 +49,7 @@
   }
 
   .price {
-    color: #0a8903;
+    color: #3cff00;
     font-size: 22px;
     font-weight: bolder;
     margin-bottom: 10px;
@@ -56,10 +57,11 @@
 
   .open-modal-button {
     background-color: #ffffff;
+    font-family: 'Rubik', sans-serif;
     color: rgb(0, 0, 0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border: none;
-    margin-top:15px;
+    margin-top:20px;
     border-radius: 5px;
     padding: 8px;
     font-size: 16px;
@@ -68,31 +70,37 @@
   }
  
   .card.green {
-    background-color: rgba(0, 255, 0, 0.2);
+    background-color: rgba(0, 255, 0, 0.353);
   }
   .card.green2 {
-    background-color: rgba(0, 255, 0, 0.467);
+    background-color: rgba(0, 255, 0, 0.502);
   }
   .card.green3 {
-    background-color: rgba(0, 255, 0, 0.71);
+    background-color: rgba(0, 255, 0, 0.656);
+  }
+  .card.green3 .price{
+    color: #3cff00;
   }
   .card.green4 {
-    background-color: rgba(0, 255, 0, 0.759);
+    background-color: rgba(0, 255, 0, 0.802);
+  }
+  .card.green4 .price{
+    color: #f2ff00;
   }
   
   .card.red {
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: rgba(255, 0, 0, 0.352);
   }
   .card.red2 {
-    background-color: rgba(255, 0, 0, 0.508);
+    background-color: rgba(255, 0, 0, 0.45);
   }
   .card.red3 {
-    background-color: rgba(255, 0, 0, 0.67);
+    background-color: rgba(255, 0, 0, 0.657);
   }
   .card.red4 {
-    background-color: rgba(255, 0, 0, 0.815);
+    background-color: rgba(255, 0, 0, 0.804);
   }
   
   .card.gray {
-    background-color: rgba(128, 128, 128, 0.2);
+    background-color: rgba(128, 128, 128, 0.607);
   }

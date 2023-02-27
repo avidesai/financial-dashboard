@@ -1,8 +1,12 @@
 .ticker-search {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+  .ticker-label {
+    color: white;
   }
   
   .ticker-input {
