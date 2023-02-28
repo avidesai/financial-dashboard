@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import StockCard from './StockCard';
 import TickerSearch from './TickerSearch';
+import StockModal from './StockModal';
 import './StockGrid.css';
 
 const StockGrid = () => {
@@ -38,12 +39,19 @@ const StockGrid = () => {
   };
 
   return (
-    <div>
+    <div className="page">
       <TickerSearch addTicker={handleAddTicker} />
-      <div className='stock-grid'>
-        {stockData.map((data, index) => (
-          <StockCard key={index} data={data} onDelete={handleDeleteTicker} />
-        ))}
+      <div className="split">
+        <div className='stock-grid'>
+          {stockData.length > 0 && (
+            <StockCard data={stockData[stockData.length - 1]} onDelete={handleDeleteTicker} />
+          )}
+        </div>
+        <div className="stock-modal">
+          {stockData.length > 0 && (
+            <StockModal show={true} ticker={stockData[stockData.length - 1].ticker} />
+          )}
+        </div>
       </div>
     </div>
   );

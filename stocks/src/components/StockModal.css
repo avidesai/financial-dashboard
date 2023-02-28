@@ -1,53 +1,44 @@
 .modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-body {
-  margin-left: 30px;
-  margin-bottom: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .modal-main {
   background-color: white;
-  margin: 10% auto;
   padding: 20px;
   border-radius: 5px;
-  width: 80%;
-  max-width: 400px;
   color: black;
 }
 
-.modal-main p {
+.modal-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-right: 20px;
+}
+
+.modal-market-cap {
   font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.modal-delete-button {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.502);
-  border: none;
-  height:28px;
-  width: 28px;
-  margin-left: 5px;
-  border-radius: 5px;
-  padding: 7px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.7s ease-in-out;
-}
-
-
-.display-block {
-  display: block;
-}
-
-.display-none {
-  display: none;
+.modal-price-to-sales-ratio,
+.modal-pe-ratio,
+.modal-quarterly-rev-growth,
+.modal-quarterly-earn-growth,
+.modal-gross-profit-margin,
+.modal-net-income-margin,
+.modal-return-on-equity,
+.modal-description {
+  font-size: 17px;
+  margin-bottom: 8px;
 }
